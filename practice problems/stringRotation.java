@@ -13,6 +13,5 @@ public String rotateRight(String s, int rotate) {
     }
     
     // convert array to string
-    String stringoutput = new String(output);
-    return stringoutput;
+    return new String(output);
 }
