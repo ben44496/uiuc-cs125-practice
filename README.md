@@ -50,3 +50,31 @@ String Rotation is all about using the [modulus operation](https://en.wikipedia.
 0 % 2     // returns 0
 ```
 As you can most likely see, it makes sense to use this operator as if we continue to loop through the character array `char[] arr`, we will reach an index that is out of bounds and we will need to restart back at the start of the `String` and copy it over until we reach the index that we want shifted.
+
+Another implementation called `rotateRightOptimized` submitted by dlin2028 uses `String` concatenation to achieve the same result.
+
+## 2. Tic-Tac-Toe Check
+In this excercise, we check for tic-tac-toe wins only in the vertical and horizontal directions. We loop through all the horizontals and then the verticals to see if there are any matches. 
+
+Instead of looping through only 3 rows and 3 columns, our code can loop through `x` rows and `y` columns depending on the input array involved. We only check for matches of 3, but it can accomdate matches of `Array.length` instead of 3 in a row for an `x` by `y` grid. 
+
+Take for example a special case of Connect 4, we would check for `counter = 4` as we are looking for 4-in-a-row's. It is important to leave code in a modular fashion such that it can complete a wide range of cases and can adapt to new ones with minimal changes. Looping through "`Array.length`" times is much more dynamic than looping through a constant `3` times. As you can imagine, if we increased the grid to a 4x4 square, then it would only loop through the first 3 rows and 3 columns, disregarding the 4th ones. It is important to keep in mind the **scalability, maintainability, and reliability** of your code base for future projects.
+
+## 3. LastTen
+This is fairly straightforward. The comments should help clarify why the code is written in that form. One thing to note is we use the modulo operator (`%`) here again because it will help us continually loop over the array over and over as we increase our index. Below is an example of why modulo operator would work.
+
+This is our array where we have added the numbers 1 to 10 consecutively using the `add()` method.
+```
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+Let's say we wanted to add number `10`, and as the 11th number, the last 10 numbers would only range from `1` to `10` as soon as we add in this new number. Because the problem says we don't have to return in any specific order, we can just write `10` to the number we threw away, `0`. The table would look something like:
+```
+[10, 1, 2, 3, 4, 5, 6, 7, 8, 9] // add(10) adds the 11th term to the index 0
+```
+
+A pattern emerges as we continually write more numbers. Number `12` would go in index 2. Number `24` would go in index 4. Number `549782` would go in the index 2. As you can see, the index is given by the the `n % 10`th time we have looped through the array. On our 10th time, we would be resting on the 0th index, thus making the modulo operator awesome in helping us find the correct index. 
+
+Important mentions:
+- Another implentation without the modulo operator `%` is possible, which restarts the counter at 0 when the index hits 10 (as `Arrays` start from 0 to the nth - 1 index where `n` is the size)
+- A good exercise for extra practice would be returning last 10 within order, probably using a list/stack or some other data structure. This would be a great time to delve into the important world of data structures :)
