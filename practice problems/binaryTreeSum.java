@@ -1,4 +1,4 @@
-ublic class YourBinaryTree extends BinaryTree {
+public class YourBinaryTree extends BinaryTree {
    
     // Overriden method 
     public int sum() {
