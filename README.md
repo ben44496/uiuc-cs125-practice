@@ -21,6 +21,12 @@ UIUC CS 125 Java Practice solutions for proficiency test
   - Enroll in the “CS 125: Introduction to Computer Science, Proficiency Exam” course. This is the same course with the practice problems and practice exam available publicly.         Once you are in the CBTF you will be able to view and complete the official proficiency exam.
   - When you visit the testing center the proficiency exam will be visible.
 
+## Study Tools
+You should use the following tools to help you study. Explanations on the PrarieLearn practice problems are below.
+- [YouTube playlist](https://www.youtube.com/playlist?list=PLi9J8D4T_-po13lr8381OFhWqmE_xHDoO)
+- PrarieLearn practice problems and practice exam
+- APCS mutiplie choice problems
+
 ## Problem Sets
 *These explanations go over concepts. For more in-depth understanding of the code, see the comments inside the code*
 1. String Rotation
@@ -35,7 +41,7 @@ UIUC CS 125 Java Practice solutions for proficiency test
 10. Working with Exceptions
 11. Maps and Trees
 
-# 1. String Rotation 
+## 1. String Rotation 
 String Rotation is all about using the [modulus operation](https://en.wikipedia.org/wiki/Modulo_operation). The thinking behind this is because we need to loop back to the start of the `String` once we have counted up to the last `char` in the `String`. The modulo operator (which uses the modulus `%`) is syntactically written as `a % b`, and return the remainder when `a` is divided by `b`. Below are some examples to help you see why this is useful.
 ```java
 5 % 2     // returns 1 because 5/2 has a remainder of 1
