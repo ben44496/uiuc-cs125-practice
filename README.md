@@ -29,6 +29,7 @@ You should use the following tools to help you study. Explanations on the Prarie
 
 ## Problem Sets
 *These explanations go over concepts. For more in-depth understanding of the code, see the comments inside the code*
+### Practice Problems
 1. String Rotation
 2. Tic-Tac-Toe Check
 3. LastTen
@@ -40,6 +41,13 @@ You should use the following tools to help you study. Explanations on the Prarie
 9. Insertion Sort
 10. Working with Exceptions
 11. Maps and Trees
+### Practice Exam
+PE-1. 2D Array Count Less Than
+PE-2. Structured String Parsing
+PE-3. Class Design: Right Triangle
+PE-4. Comparable Ferret
+PE-5. Simpled Linked List Count Negative
+PE-6. Binary Tree Count Less Than
 
 ## 1. String Rotation 
 String Rotation is all about using the [modulus operation](https://en.wikipedia.org/wiki/Modulo_operation). The thinking behind this is because we need to loop back to the start of the `String` once we have counted up to the last `char` in the `String`. The modulo operator (which uses the modulus `%`) is syntactically written as `a % b`, and return the remainder when `a` is divided by `b`. Below are some examples to help you see why this is useful.
@@ -78,3 +86,8 @@ A pattern emerges as we continually write more numbers. Number `12` would go in 
 Important mentions:
 - Another implentation without the modulo operator `%` is possible, which restarts the counter at 0 when the index hits 10 (as `Arrays` start from 0 to the nth - 1 index where `n` is the size)
 - A good exercise for extra practice would be returning last 10 within order, probably using a list/stack or some other data structure. This would be a great time to delve into the important world of data structures :)
+
+## PE-6. Binary Tree Count Less Than
+For this problem it is required that we need some way for looping through all items inside the Binary Tree. The easiest method to do so for a BT is through a recursive method. 
+
+
